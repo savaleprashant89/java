@@ -1,0 +1,53 @@
+package assignment12;
+import java.io.*;
+65public class Assignment12
+{
+public static void main(String[] args)
+{
+FileInputStream sourceStream = null; //FileReader for char by char
+FileOutputStream targetStream = null; //FileWriter for char by char
+try
+{
+sourceStream= new FileInputStream("sorcefile.txt");
+targetStream= new FileOutputStream("targetfile.txt");
+// Reading source file and writing
+// content to target file byte by byte
+int temp;
+while ((temp = sourceStream.read())!= -1)
+{
+targetStream.write(temp);
+}
+sourceStream.close();
+targetStream.close();
+}
+catch(Exception e)
+{
+System.out.println("Exception");
+}
+66//File class
+File f = new File("sorcefile.txt");
+System.out.println("The name of the file is: " + f.getName());
+System.out.println("The absolute path of the file is: " + f.getAbsolutePath());
+System.out.println("Is file writeable?: " + f.canWrite());
+System.out.println("Is file readable " + f.canRead());
+System.out.println("The size of the file in bytes is: " + f.length());
+System.out.println("File Exist "+f.exists());
+System.out.println("Is File or Directory "+f.isFile());
+System.out.println("Is File or Directory "+f.isDirectory());
+System.out.println("Is Hidden "+f.isHidden());
+System.out.println("Last Modified Time: " + f.lastModified());
+}
+}
+
+OUTPUT:
+The name of the file is: sorcefile.txt
+The absolute path of the file is: F:\M.S.Sonawane\2021- 22\Java\Assignment12\sorcefile.txt
+Is file writeable?: true
+Is file readable true
+The size of the file in bytes is: 46
+File Exist true
+Is File or Directory true
+Is File or Directory false
+Is Hidden false
+67Last Modified Time: 1642157554913
+Assignment 13) Write a program that demonstrate J
