@@ -1,0 +1,95 @@
+package assignment2;
+import java.io.*;
+public class Assignment2
+{
+public static void main(String[] args)
+{
+try
+{
+DataInputStream d= new DataInputStream(System.in);
+System.out.println("\n enter the 1st String ");
+3String s=d.readLine();
+//String Functions
+int y=s.length();
+System.out.println("\n length of string is "+y);
+String z=s.toUpperCase();
+System.out.println("\n string in upper case "+z);
+String l=s.toLowerCase();
+System.out.println("\n string in lower case "+l);
+char m=s.charAt(3);
+System.out.println("\n char at 3rd index is "+m);
+String o=s.replace('a','b');
+System.out.println("\n replaced string is "+o);
+String n=s.substring(2,5);
+System.out.println("\n sub string from 2 to 5 index is "+n);
+System.out.println("\n enter the character to find index");
+String s2=d.readLine();
+int a=s.indexOf(s2);
+System.out.println("\n index of char is "+a);
+System.out.println("\n enter the character to find last index");
+String s3=d.readLine();
+int b=s.lastIndexOf(s3);
+System.out.println("\n last index of char is "+b);
+System.out.println("\n enter the 2nd String ");
+String s1=d.readLine();
+String p=s.concat(s1);
+4System.out.println("\n concated string is "+p);
+boolean b1=s.equals(s1);
+if(b1==true)
+{
+System.out.println("\n strings are equal ");
+}
+else
+{
+System.out.println("\n strings are not equal ");
+}
+//StringBuffer Functions
+StringBuffer sf = new StringBuffer("Coding Atharva");
+System.out.println("\n String = "+sf); // Will Print the string
+System.out.println("\n Length = "+sf.length() ); // total numbers of
+characters
+System.out.println("\n Length = "+sf.capacity() ); // total allocatedcapacitysf.setLength(6); // Sets the length and destroy the remaining charactersSystem.out.println("\n After setting length String = "+sf);
+sf.setCharAt(0,'K'); // It will change character at specified positionSystem.out.println("\n SetCharAt String = "+sf);
+sf.setCharAt(0,'C');
+int a1 = 7;
+sf.append(a1); // It concatenates the other data type value
+System.out.println("\n Appended String = "+sf);
+sf.insert(6," Atharva"); // used to insert one string or char or object
+5System.out.println("\n Inserted String = "+sf);
+sf.reverse();
+System.out.println("\n Reverse String = "+sf);
+}
+catch(Exception e)
+{
+System.out.println(""+e);
+}
+}
+}
+
+
+OUTPUT:- enter the 1st String
+manojkumar
+length of string is 10
+string in upper case MANOJKUMAR
+string in lower case manojkumar
+char at 3rd index is o
+replaced string is mbnojkumbr
+sub string from 2 to 5 index is noj
+enter the character to find index
+a
+index of char is 1
+enter the character to find last index
+a
+last index of char is 8
+6enter the 2nd String
+sonawane
+concated string is manojkumarsonawane
+strings are not equal
+String = Coding Atharva
+Length = 14
+Length = 30
+After setting length String = Coding
+SetCharAt String = Koding
+Appended String = Coding7
+Inserted String = Coding Atharva7
+Reverse String = 7avrahtA gnidoC
